@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoldenStack Hub | Admin</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./Image/favicon-32x32.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="admin-container">
+      <aside class="sidebar">
+        <h2>GoldenStack <span>Hub</span></h2>
+
+        <nav>
+          <a href="#" class="active">Dashboard</a>
+          <a href="#">Projects</a>
+          <a href="add-project.html">Add Project</a>
+        </nav>
+
+        <button id="logout-btn">Logout</button>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <h1>Admin Dashboard</h1>
+            <p>Manage your portfolio projects</p>
+          </div>
+        </header>
+
+        <section class="dashboard-content">
+          <div class="welcome-section">
+            <h2>Welcome Back!</h2>
+            <p>Manage your projects from one place.</p>
+          </div>
+
+          <div class="stats-container">
+            <div class="stat-card">
+              <h3>Total Projects</h3>
+              <p id="total-projects">0</p>
+            </div>
+
+            <div class="stat-card">
+              <h3>Published Projects</h3>
+              <p id="published-projects">0</p>
+            </div>
+
+            <div class="stat-card">
+              <h3>Featured Projects</h3>
+              <p id="featured-projects">0</p>
+            </div>
+          </div>
+
+          <section class="projects-section">
+            <h2>Recent Projects</h2>
+            <div id="projects-list">
+              <p>No projects added yet.</p>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

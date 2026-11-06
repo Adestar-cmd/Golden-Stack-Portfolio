@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Project | GoldenStack Hub</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./Image/favicon-32x32.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="admin-container">
+      <aside class="sidebar">
+        <h2>GoldenStack <span>Hub</span></h2>
+
+        <nav>
+          <a href="index.html">Dashboard</a>
+          <a href="index.html">Projects</a>
+          <a href="add-project.html" class="active">Add Project</a>
+        </nav>
+
+        <button id="logout-btn">Logout</button>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <h1>Add New Project</h1>
+          <p>Add a project to your portfolio</p>
+        </header>
+
+        <section class="dashboard-content">
+          <form id="project-form">
+            <div class="form-group">
+              <label for="project-name">Project Name</label>
+              <input
+                type="text"
+                id="project-name"
+                placeholder="Enter project name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="project-description">Project Description</label>
+              <textarea
+                id="project-description"
+                placeholder="Describe your project"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="project-category">Project Category</label>
+              <select id="project-category" required>
+                <option value="">Select category</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Graphic Design">Graphic Design</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="project-image">Project Image</label>
+              <input type="file" id="project-image" accept="image/*" required />
+              <p id="upload-message"></p>
+              <img id="image-preview" src="" alt="Project preview" />
+            </div>
+
+            <div class="form-group">
+              <label for="project-link">Project Link</label>
+              <input
+                type="url"
+                id="project-link"
+                placeholder="https://example.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="featured-project" />
+                Featured Project
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="published-project" checked />
+                Publish Project
+              </label>
+            </div>
+
+            <button type="submit" id="save-project-btn">Save Project</button>
+
+            <p id="project-message"></p>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="cloudinary.js"></script>
+    <script src="add-project.js"></script>
+  </body>
+</html>
